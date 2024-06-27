@@ -1,0 +1,24 @@
+const prompt = require('prompt-sync')();
+
+console.log("Vamos calcular uma potência")
+
+while (true) {
+
+    let base = prompt("Base: ")
+    
+    base = +base
+    
+    let expoente = +prompt("Expoente: ")
+    
+    let resultado = 1
+    let base_aux = 1
+    for(let j = 0; j < expoente; j++) {
+        resultado = 0
+        for(let i = 0; i < base; i++) {
+            resultado += base_aux
+        }
+        base_aux = resultado
+    }
+    
+    console.log(resultado)
+}
